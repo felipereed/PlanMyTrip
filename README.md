@@ -50,6 +50,9 @@ Project One
 
 - **Wireframes**:  The proposed layout and design of your app. Create mockups for multiple views, including both desktop and mobile formats, and consider whether or not you need to account for landscape and portrait orientations.
 
+
+![alt text](https://i.imgur.com/FqJ2HTn.png "Mockup")
+
 - **MVP**: 
 The website will have the following capabilities:
 1. Provide the user recommendations for a day in the city including meals, museums, and art galleries.
