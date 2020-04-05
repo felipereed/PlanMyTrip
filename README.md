@@ -62,16 +62,19 @@ The website will have the following capabilities:
 3. let user filter recommendations by price, location, and rating.
 
 - **Goals**: 
+
 | **Monday**              | **Tuesday**                       | **Wednesday**                       | **Thursday**         |
 | ------------------------|-----------------------------------| ------------------------------------| ---------------------|
 | Project Pitch           | Test and improve recommendation   | Implement new categories            | Start post-MVP       |
 | Project Approval        | Implement images and other content| Test and improve new feature        | Test added features  |
 | HTML/CSS/JS Boilerplate | Test and improve new content      | Verify all MVP features are working | Prepare Presentation |
 | Pull info from API      |                                   |                                     |                      |
-| Display recommendation  |                                   |                                     |                      
+| Display recommendation  |                                   |                                     |                      |
 
 
-- **Priority Matrix**: A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority.
+- **Priority Matrix**: 
+
+[Graph]: https://i.imgur.com/qDMUzjO.png
 
 - **Timeframes**: How long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
