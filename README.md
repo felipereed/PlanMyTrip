@@ -49,9 +49,9 @@
 
 - **Wireframes**:  
 
-![alt text](https://i.imgur.com/FqJ2HTn.png "Mockup")
+![alt text](https://i.imgur.com/FqJ2HTn.png "mockup")
 
-![alt text](https://i.imgur.com/ndjUGTY.png "Mockup")
+![alt text](https://i.imgur.com/ndjUGTY.png "desktopMockup")
 
 - **MVP**: 
 The website will have the following capabilities:
@@ -62,7 +62,7 @@ The website will have the following capabilities:
 - **Post-MVP**: 
 1. Add additional recommendation categories such as bars, parks, and outdoor activities. 
 2. Recommendations should be illustrated with images from the Instagram API (hashtags).
-3. let user filter recommendations by price, location, and rating.
+3. Let user filter recommendations by price, location, and rating.
 
 - **Goals**: 
 
@@ -89,7 +89,7 @@ The website will have the following capabilities:
 
 **Tuesday**:
 
-* Teste and improve recommendation - 3 hrs
+* Test and improve recommendation - 3 hrs
 * Implement images and other content - 3 hrs
 * Test and improve new content - 3 hrs
 
