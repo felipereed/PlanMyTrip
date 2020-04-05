@@ -74,8 +74,30 @@ The website will have the following capabilities:
 
 - **Priority Matrix**: 
 
-[Graph]: https://i.imgur.com/qDMUzjO.png
+![alt text](https://i.imgur.com/qDMUzjO.png "Graph")
 
-- **Timeframes**: How long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
+- **Timeframes**: 
 
-Are you interested in styling your README.md to make it look nice? Don't know how to include photos or create links? Check out this [Markdown Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
+**Monday**:
+
+* HTML/CSS/JS boilerplate - 2 hrs
+* Pull info from API - 4 hrs
+* Display recommendation - 4 hrs
+
+**Tuesday**:
+
+* Teste and improve recommendation - 3 hrs
+* Implement images and other content - 3 hrs
+* Test and improve new content - 3 hrs
+
+**Wednesday**: 
+
+* Implement new categories - 4 hrs
+* Test and improve new features - 3 hrs
+* Verify all MVP features are working - 2 hrs
+
+**Thursday**:
+
+* Start post-MVP - 4 hrs
+* Test added features - 2 hrs
+* Prepare presentation - 2 hrs
