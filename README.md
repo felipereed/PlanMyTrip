@@ -83,24 +83,9 @@ The website will have the following capabilities:
 
 **Monday**:
 
-* HTML/CSS/JS boilerplate - 2 hrs
-* Pull info from API - 4 hrs
-* Display recommendation - 4 hrs
-
-**Tuesday**:
-
-* Test and improve recommendation - 3 hrs
-* Implement images and other content - 3 hrs
-* Test and improve new content - 3 hrs
-
-**Wednesday**: 
-
-* Implement new categories - 4 hrs
-* Test and improve new features - 3 hrs
-* Verify all MVP features are working - 2 hrs
-
-**Thursday**:
-
-* Start post-MVP - 4 hrs
-* Test added features - 2 hrs
-* Prepare presentation - 2 hrs
+| **Monday**              | **Tuesday**                       | **Wednesday**                       | **Thursday**         |
+| ------------------------|-----------------------------------| ------------------------------------| ---------------------|
+|HTML/CSS/JS boilerplate - 4 hrs|Test and improve recommendation - 4 hrs|Implement new categories - 4 hours| Start post-MVP - 4 hrs|
+|Pull info from API - 4 hrs|Implement images and other content - 3 hrs|Test and improve new feature - 4 hours|Test added features - 2 hours|
+|Display recommendation - 4 hrs | Test and improve new content - 3 hrs|Verify all MVP features are working - 2 hrs|Prepare Presentation - 2 hrs |
+|*Total: 12 hrs*|*Total: 10 hrs*|*Total: 10 hrs*|*Total:  8 hrs*|
