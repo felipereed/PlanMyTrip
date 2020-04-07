@@ -35,6 +35,24 @@ nav {
   color: whitesmoke;
 }
 
+/* test dropdown */
+
+.price-dropdown {
+  background-color: rgb(200, 200, 200);
+  min-width: 50px;
+  min-height: 30px;
+  margin: 10px auto;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* test dropdown */
+
+
+
 button {
   background-color: rgb(200, 200, 200);
   min-width: 50px;
@@ -89,4 +107,8 @@ button {
 .meal-name{
   text-align: center;
   width:33%;
+}
+
+@media only screen and (min-width: 768px) {
+
 }
