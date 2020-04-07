@@ -58,11 +58,6 @@ button {
   min-width: 50px;
   min-height: 30px;
 }
-.button-container {
-  justify-content: space-evenly;
-  padding: 10px;
-}
-
 .recommendation {
   padding: 5px 0 5px 0;
   display: flex;
@@ -78,6 +73,10 @@ button {
 }
 .surprise-me-button{
   min-width: 100px;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
 }
 
 .lunch {
@@ -100,11 +99,7 @@ button {
   text-align: center;
 }
 
-.attraction-name {
-  width:33%;
-
-}
-.meal-name{
+h3 {
   text-align: center;
   width:33%;
 }
