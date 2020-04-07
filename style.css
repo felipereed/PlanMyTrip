@@ -1,0 +1,92 @@
+body {
+  font-family: 'Neucha', cursive;
+}
+
+.main-page {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 10px;
+  text-align: center;
+}
+
+.main-header {
+  text-align: center;
+  justify-content: center;
+}
+
+.text-area {
+  text-align: justify;
+  padding: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  padding: 10px;
+  background-color: #4C5B5C ;
+}
+
+.header-links {
+  padding: 10px;
+  color: whitesmoke;
+}
+
+button {
+  background-color: rgb(200, 200, 200);
+  min-width: 50px;
+  min-height: 30px;
+}
+.button-container {
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.recommendation {
+  padding: 5px 0 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.breakfast {
+  background-color: #FDE74C;
+}
+
+.price-button {
+  margin: 10px;
+}
+.surprise-me-button{
+  min-width: 100px;
+}
+
+.lunch {
+  background-color: #DB5461;
+}
+
+.museum {
+  background-color: #3891A6;
+}
+
+.art-gallery {
+  background-color: #E3655B;
+}
+
+.dinner {
+  background-color: #f4ae3b;
+}
+
+.footer {
+  text-align: center;
+}
+
+.attraction-name {
+  width:33%;
+
+}
+.meal-name{
+  text-align: center;
+  width:33%;
+}
