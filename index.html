@@ -13,9 +13,8 @@
 
 <body>
   <nav class="header">
-    <a href="" class="header-links">Home</a>
-    <a href="" class="header-links">About</a>
-    <a href="" class="header-links">Contact</a>
+    <a href="/index.html" class="header-links">Home</a>
+    <a href="#contact-me-links" class="header-links">Contact</a>
   </nav>
   
   <div class="main-header">
@@ -37,12 +36,13 @@
     <option value="4">$$$$</option>
   </select>
 </div>
-<div>
-  <img id="resultImgBreakfast" src="">
+<div class="result-section">
+  <img class="recommendation-img" id="resultImgBreakfast" src="">
   <p id="resultNameBreakfast"></p>
   <p id="resultAddressBreakfast"></p>
   <a id="resultWebsiteBreakfast" href="" target="_blank" alt="Website">Click here for more info.</a>
   <p id="resultPhoneBreakfast"></p>
+  <button id="closeBreakfastRecommendation" class="close-recommendation">X</button>
 </div>
 
   <div class="lunch recommendation">
@@ -56,12 +56,13 @@
     </select>
   </div>
 
-  <div>
-    <img id="resultImgLunch" src="">
+  <div class="result-section">
+    <img class="recommendation-img" id="resultImgLunch" src="">
     <p id="resultNameLunch"></p>
     <p id="resultAddressLunch"></p>
     <a id="resultWebsiteLunch" href="" target="_blank" alt="Website">Click here for more info.</a>
     <p id="resultPhoneLunch"></p>
+    <button id="closeLunchRecommendation" class="close-recommendation">X</button>
   </div>
 
   <div class="museum recommendation">
@@ -69,24 +70,26 @@
     <button class="surprise-me-button">Surprise Me!</button>
   </div>
 
-  <div>
-    <img id="resultImgMuseum" src="">
+  <div class="result-section">
+    <img class="recommendation-img" id="resultImgMuseum" src="">
     <p id="resultNameMuseum"></p>
     <p id="resultAddressMuseum"></p>
     <a id="resultWebsiteMuseum" href="" target="_blank" alt="Website">Click here for more info.</a>
     <p id="resultPhoneMuseum"></p>
+    <button id="closeMuseumRecommendation" class="close-recommendation">X</button>
   </div>
   <div class="park recommendation">
     <h3 class="attraction-name">Park</h3>
     <button class="surprise-me-button">Surprise Me!</button>
   </div>
   
-  <div>
-    <img id="resultImgPark" src="">
+  <div class="result-section">
+    <img class="recommendation-img" id="resultImgPark" src="">
     <p id="resultNamePark"></p>
     <p id="resultAddressPark"></p>
     <a id="resultWebsitePark" href="" target="_blank" alt="Website">Click here for more info.</a>
     <p id="resultPhonePark"></p>
+    <button id="closeParkRecommendation" class="close-recommendation">X</button>
   </div>
 
   <div class="dinner recommendation">
@@ -100,14 +103,23 @@
     </select>
   </div>
     
-  <div>
-    <img id="resultImgDinner" src="">
+  <div class="result-section">
+    <img class="recommendation-img" id="resultImgDinner" src="">
     <p id="resultNameDinner"></p>
     <p id="resultAddressDinner"></p>
     <a id="resultWebsiteDinner" href="" target="_blank" alt="Website">Click here for more info.</a>
     <p id="resultPhoneDinner"></p>
+    <button id="closeDinnerRecommendation" class="close-recommendation">X</button>
   </div>
-
+<div id="contact-me-links">
+  <a href="mailto:contactfelipelins@gmail.com" target="_top">
+    <img class="contact-me-icon" src="https://i.imgur.com/HpjDzSZ.png" alt="email">
+  </a> 
+  <a href="http://www.linkedin.com/in/felipereed" target="_blank">
+    <img class="contact-me-icon" src="https://i.imgur.com/o36LV9h.png" alt="linkedin">
+  </a>
+  
+</div>
   <footer class="footer">
     <p>&copy; Felipe Lins 2020</p>
     

@@ -27,10 +27,6 @@ function randonmlySelectItem(myArray) {
   return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-setTimeout(() => {
-  //getInfoFromApi('restaurant', 4);
-}, 2000);
-
 //https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
 function buttonEvents() {
   
@@ -41,12 +37,29 @@ function buttonEvents() {
   let museumButton = document.querySelector(".museum > button");
   let parkButton = document.querySelector(".park > button");
 
+  
+  let closeBreakfastRecommendation = document.getElementById('closeBreakfastRecommendation');
+  
+  let closeLunchRecommendation = document.getElementById('closeLunchRecommendation');
+  
+  let closeMuseumRecommendation = document.getElementById('closeMuseumRecommendation');
+  
+  let closeParkRecommendation = document.getElementById('closeParkRecommendation');
+  
+  let closeDinnerRecommendationButton = document.getElementById('closeDinnerRecommendation');
+
   breakfastDropdown.addEventListener("change", selectBreakfast);
   lunchDropdown.addEventListener("change", selectLunch);
   dinnerDropdown.addEventListener("change", selectDinner);
 
   museumButton.addEventListener("click", buttonMuseum);
   parkButton.addEventListener("click", buttonPark);
+
+  closeBreakfastRecommendation.addEventListener(`click`, hideResultSection);
+  closeLunchRecommendation.addEventListener(`click`, hideResultSection);
+  closeMuseumRecommendation.addEventListener(`click`, hideResultSection);
+  closeParkRecommendation.addEventListener(`click`, hideResultSection);
+  closeDinnerRecommendationButton.addEventListener(`click`, hideResultSection);
 }
 // trying to make async because it did not work without it
 async function makeRecommendation(searchTerm, priceRange) {
@@ -56,7 +69,7 @@ async function makeRecommendation(searchTerm, priceRange) {
   let randomItem = randonmlySelectItem(apiResults);
   console.log(randomItem);
 
-  populateResultDiv(randomItem, searchTerm);
+  populateResultSection(randomItem, searchTerm);
 }
 
 async function selectBreakfast() {
@@ -84,7 +97,7 @@ async function buttonPark() {
 
 buttonEvents();
 
-function populateResultDiv(item, category) {
+function populateResultSection(item, category) {
   let img = document.getElementById("resultImg" + category);
   let name = document.getElementById("resultName" + category);
   let address = document.getElementById("resultAddress" + category);
@@ -97,4 +110,11 @@ function populateResultDiv(item, category) {
   phone.innerHTML = item.display_phone;
   website.href = item.url;
 
+  img.parentElement.style.display = "block";
+}
+
+//toggle hide and show solution https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+function hideResultSection() {
+  this.parentElement.style.display = "none";
+  
 }
