@@ -13,9 +13,9 @@
 
 <body>
   <nav class="header">
-    <a class="header-links">Home</a>
-    <a class="header-links">About</a>
-    <a class="header-links">Contact</a>
+    <a href="" class="header-links">Home</a>
+    <a href="" class="header-links">About</a>
+    <a href="" class="header-links">Contact</a>
   </nav>
   
   <div class="main-header">
@@ -23,19 +23,9 @@
       <img src="https://i.imgur.com/kxLJIVx.png" alt="logo">
     </div>
     <div class="text-area">
-      <p>Visiting a city like NYC can be overwhelming. So much to do, so many options! <em>Plan My Trip</em> randomly generates recommendations of the top rated attractions in the Big Apple. Give it a try!</p>
+      <p>Visiting a city like NYC can be overwhelming. So much to do, so many options! <em>Plan My Trip</em> randomly generates recommendations of the most rated attractions in the Big Apple. Give it a try!</p>
     </div>
 
-  <!-- </div>
-  <div class="breakfast recommendation">
-    <h3 class="meal-name">Breakfast</h3>
-    <div class="button-container">
-      <button class="price-button">$</button>
-      <button class="price-button">$$</button>
-      <button class="price-button">$$$</button>
-    </div>
-  </div> -->
-<!-- Testing dropdown menu  -->
 </div>
 <div class="breakfast recommendation">
   <h3 class="meal-name">Breakfast</h3>
@@ -47,9 +37,13 @@
     <option value="4">$$$$</option>
   </select>
 </div>
-
-<!-- Testing dropdown menu  -->
-
+<div>
+  <img id="resultImgBreakfast" src="">
+  <p id="resultNameBreakfast"></p>
+  <p id="resultAddressBreakfast"></p>
+  <a id="resultWebsiteBreakfast" href="" target="_blank" alt="Website">Click here for more info.</a>
+  <p id="resultPhoneBreakfast"></p>
+</div>
 
   <div class="lunch recommendation">
     <h3 class="meal-name">Lunch</h3>
@@ -62,21 +56,37 @@
     </select>
   </div>
 
-  <!-- Testing dropdown menu  -->
-
-
-
-
-  
-  <!-- Testing dropdown menu  -->
+  <div>
+    <img id="resultImgLunch" src="">
+    <p id="resultNameLunch"></p>
+    <p id="resultAddressLunch"></p>
+    <a id="resultWebsiteLunch" href="" target="_blank" alt="Website">Click here for more info.</a>
+    <p id="resultPhoneLunch"></p>
+  </div>
 
   <div class="museum recommendation">
     <h3 class="attraction-name">Museum</h3>
     <button class="surprise-me-button">Surprise Me!</button>
   </div>
-  <div class="art-gallery recommendation">
+
+  <div>
+    <img id="resultImgMuseum" src="">
+    <p id="resultNameMuseum"></p>
+    <p id="resultAddressMuseum"></p>
+    <a id="resultWebsiteMuseum" href="" target="_blank" alt="Website">Click here for more info.</a>
+    <p id="resultPhoneMuseum"></p>
+  </div>
+  <div class="park recommendation">
     <h3 class="attraction-name">Park</h3>
     <button class="surprise-me-button">Surprise Me!</button>
+  </div>
+  
+  <div>
+    <img id="resultImgPark" src="">
+    <p id="resultNamePark"></p>
+    <p id="resultAddressPark"></p>
+    <a id="resultWebsitePark" href="" target="_blank" alt="Website">Click here for more info.</a>
+    <p id="resultPhonePark"></p>
   </div>
 
   <div class="dinner recommendation">
@@ -89,17 +99,20 @@
       <option value="4">$$$$</option>
     </select>
   </div>
+    
+  <div>
+    <img id="resultImgDinner" src="">
+    <p id="resultNameDinner"></p>
+    <p id="resultAddressDinner"></p>
+    <a id="resultWebsiteDinner" href="" target="_blank" alt="Website">Click here for more info.</a>
+    <p id="resultPhoneDinner"></p>
+  </div>
+
   <footer class="footer">
     <p>&copy; Felipe Lins 2020</p>
     
   </footer>
-  <div id="resultDiv">
-    <img id="resultImg" src="">
-    <p id="resultName"></p>
-    <p id="resultAddress"></p>
-    <a id="resultWebsite" href="" alt="Website">Click here for more info.</a>
-    <p id="resultPhone"></p>
-  </div>
+
 </body>
 
 </html>

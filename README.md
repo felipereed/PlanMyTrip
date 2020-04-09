@@ -55,12 +55,12 @@
 
 - **MVP**: 
 The website will have the following capabilities:
-1. Provide the user recommendations for a day in the city including meals, museums, and art galleries.
-2. The recommendations will include an image, an address, a phone number and a website link. Attractions that are missing such basic information in the API will be excluded. 
-3. The recommendations will be from the restaurants and museums categories. 
+1. Provide the user recommendations for a day in the city including meals, museums, and parks.
+2. The recommendations will include information such as an image, an address, a phone number and/or a website link. 
+3. The recommendations will be from the restaurants, museums, and categories. 
 
 - **Post-MVP**: 
-1. Add additional recommendation categories such as bars, parks, and outdoor activities. 
+1. Add additional recommendation categories such as bars, art galleries, and outdoor activities. 
 2. Recommendations should be illustrated with images from the Instagram API (hashtags).
 3. Let user filter recommendations by price, location, and rating.
 

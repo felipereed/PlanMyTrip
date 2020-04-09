@@ -1,6 +1,3 @@
-//get the buttons
-
-//API
 //From OMDI exercise 
 const API_KEY = 'Bearer 4xXf6b67EXTMd9Mw4WkHO4-ivhSa7wSi252Lsi0Zvgs5FmNaSQVE2oTPH_1_tji5mVhZ4qhN_aq-jjGsK6Nrcgwic7UxQmaZNaEG43X_n5L054fE5WlbUdAMqgKJXnYx';
 //Add CORS authorization code Corey sent
@@ -11,7 +8,6 @@ let storedRecommendations = [];
 async function getInfoFromApi(searchTerm, price) {
   let urlWithParameter = BASE_URL + `&term=${searchTerm}`;
 
-//DRY!!!!!!!!!!! 
   if (price == 1 || price == 2 || price == 3 || price == 4) {
     urlWithParameter = urlWithParameter + `&price=${price}`;
   }
@@ -31,39 +27,69 @@ function randonmlySelectItem(myArray) {
   return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-
-
 setTimeout(() => {
   //getInfoFromApi('restaurant', 4);
 }, 2000);
 
 //https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
 function buttonEvents() {
-  let dropdowns = document.querySelectorAll('select');
-  for (i = 0; i < dropdowns.length; i++) {
-    dropdowns[i].addEventListener("change", selectEvent);
-  }
   
+  let breakfastDropdown = document.querySelector(".breakfast > select");
+  let lunchDropdown = document.querySelector(".lunch > select");
+  let dinnerDropdown = document.querySelector(".dinner > select");
+
+  let museumButton = document.querySelector(".museum > button");
+  let parkButton = document.querySelector(".park > button");
+
+  breakfastDropdown.addEventListener("change", selectBreakfast);
+  lunchDropdown.addEventListener("change", selectLunch);
+  dinnerDropdown.addEventListener("change", selectDinner);
+
+  museumButton.addEventListener("click", buttonMuseum);
+  parkButton.addEventListener("click", buttonPark);
 }
 // trying to make async because it did not work without it
-async function selectEvent() {
-  let priceRange = this.options[this.selectedIndex].value;
-  let apiResults = await getInfoFromApi("restaurant", priceRange);
+async function makeRecommendation(searchTerm, priceRange) {
+  
+  let apiResults = await getInfoFromApi(searchTerm, priceRange);
 
   let randomItem = randonmlySelectItem(apiResults);
   console.log(randomItem);
 
-  populateResultDiv(randomItem, document.getElementById("resultDiv"));
+  populateResultDiv(randomItem, searchTerm);
+}
+
+async function selectBreakfast() {
+  let priceRange = this.options[this.selectedIndex].value;
+  makeRecommendation("Breakfast", priceRange);
+}
+
+async function selectLunch() {
+  let priceRange = this.options[this.selectedIndex].value;
+  makeRecommendation("Lunch", priceRange);
+}
+
+async function selectDinner() {
+  let priceRange = this.options[this.selectedIndex].value;
+  makeRecommendation("Dinner", priceRange);
+}
+
+async function buttonMuseum() {
+  makeRecommendation("Museum");
+}
+
+async function buttonPark() {
+  makeRecommendation("Park");
 }
 
 buttonEvents();
-//create an array with results
-function populateResultDiv(item, div) {
-  let img = document.getElementById("resultImg");
-  let name = document.getElementById("resultName");
-  let address = document.getElementById("resultAddress");
-  let phone = document.getElementById("resultPhone");
-  let website = document.getElementById("resultWebsite");
+
+function populateResultDiv(item, category) {
+  let img = document.getElementById("resultImg" + category);
+  let name = document.getElementById("resultName" + category);
+  let address = document.getElementById("resultAddress" + category);
+  let phone = document.getElementById("resultPhone" + category);
+  let website = document.getElementById("resultWebsite" + category);
 
   img.src = item.image_url;
   name.innerHTML = item.name;
@@ -72,6 +98,3 @@ function populateResultDiv(item, div) {
   website.href = item.url;
 
 }
-//randonmly pick one result to show
-
-//render in the page in an expendable section
