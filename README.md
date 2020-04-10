@@ -70,7 +70,7 @@ The website will have the following capabilities:
 | ------------------------|-----------------------------------| ------------------------------------| ---------------------|
 | Project Pitch           | Test and improve recommendation   | Implement new categories            | Start post-MVP       |
 | Project Approval        | Implement images and other content| Test and improve new feature        | Test added features  |
-| HTML/CSS/JS Boilerplate | Test and improve new content      | Verify all MVP features are working | Prepare Presentation |
+| HTML/CSS/JS Boilerplate | Test and improve new content      | Verify all features are working | Prepare Presentation |
 | Pull info from API      |                                   |                                     |                      |
 | Display recommendation  |                                   |                                     |                      |
 
@@ -87,5 +87,5 @@ The website will have the following capabilities:
 | ------------------------|-----------------------------------| ------------------------------------| ---------------------|
 |HTML/CSS/JS boilerplate - 4 hrs|Test and improve recommendation - 4 hrs|Implement new categories - 1 hour| Start post-MVP - 4 hrs|
 |Pull info from API - 5 hrs|Implement images and other content - 3 hrs|CSS - 8 hours|Design for desktop - 5 hours|
-|Display recommendation - 4 hrs | Test and improve new content - 3 hrs|Verify all MVP features are working - 2 hrs|Prepare Presentation - 2 hrs |
+|Display recommendation - 4 hrs | Test and improve new content - 3 hrs|Verify all features are working - 2 hrs|Prepare Presentation - 2 hrs |
 |*Total: 13 hrs*|*Total: 10 hrs*|*Total: 11 hrs*|*Total:  11 hrs*|
