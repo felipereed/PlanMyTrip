@@ -19,7 +19,7 @@ async function getInfoFromApi(searchTerm, price) {
   });
 
   console.log(response);
-  //returns the response from the API in the format
+  //returns the response from the API 
   return response.data.businesses;
 }
 //https://css-tricks.com/snippets/javascript/select-random-item-array/
@@ -65,7 +65,6 @@ function buttonEvents() {
   closeLandmarkRecommendation.addEventListener('click', hideResultSection);
   closeRooftopRecommendation.addEventListener('click', hideResultSection);
 }
-// trying to make async because it did not work without it
 //this function calls the API, gets a random item from the results and call the populateResultSection function below to display info on the page
 async function makeRecommendation(searchTerm, priceRange) {
   let apiResults = await getInfoFromApi(searchTerm, priceRange);
