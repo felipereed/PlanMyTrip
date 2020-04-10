@@ -101,7 +101,7 @@ button {
 .rooftop {
   background-color: #ACA9C4;
 }
-
+/* default : hides recommendation results */
 .result-section {
   display: none;
 }
