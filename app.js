@@ -11,10 +11,10 @@ async function getInfoFromApi(searchTerm, price) {
   if (price == 1 || price == 2 || price == 3 || price == 4) {
     urlWithParameter = urlWithParameter + `&price=${price}`;
   }
+  // add header to axios solution https://github.com/axios/axios/issues/1744
   let response = await axios.get(urlWithParameter, {
     headers: {
-      "Authorization": API_KEY,
-      "Access-Control-Allow-Headers": "*"
+      'Authorization': API_KEY
     }
 
   });
@@ -30,79 +30,86 @@ function randonmlySelectItem(myArray) {
 //https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
 function buttonEvents() {
   
-  let breakfastDropdown = document.querySelector(".breakfast > select");
-  let lunchDropdown = document.querySelector(".lunch > select");
-  let dinnerDropdown = document.querySelector(".dinner > select");
-
-  let museumButton = document.querySelector(".museum > button");
-  let parkButton = document.querySelector(".park > button");
+  let breakfastDropdown = document.querySelector('.breakfast > select');
+  let lunchDropdown = document.querySelector('.lunch > select');
+  let dinnerDropdown = document.querySelector('.dinner > select');
+  let museumButton = document.querySelector('.museum > button');
+  let parkButton = document.querySelector('.park > button');
+  let landmarkButton = document.querySelector('.landmark > button');
+  let rooftopButton = document.querySelector('.rooftop > button');
 
   
   let closeBreakfastRecommendation = document.getElementById('closeBreakfastRecommendation');
-  
   let closeLunchRecommendation = document.getElementById('closeLunchRecommendation');
-  
   let closeMuseumRecommendation = document.getElementById('closeMuseumRecommendation');
-  
   let closeParkRecommendation = document.getElementById('closeParkRecommendation');
-  
   let closeDinnerRecommendationButton = document.getElementById('closeDinnerRecommendation');
+  let closeLandmarkRecommendation = document.getElementById('closeLandmarkRecommendation');
+  let closeRooftopRecommendation = document.getElementById('closeRooftopRecommendation');
 
-  breakfastDropdown.addEventListener("change", selectBreakfast);
-  lunchDropdown.addEventListener("change", selectLunch);
-  dinnerDropdown.addEventListener("change", selectDinner);
+  breakfastDropdown.addEventListener('change', selectBreakfast);
+  lunchDropdown.addEventListener('change', selectLunch);
+  dinnerDropdown.addEventListener('change', selectDinner);
+  museumButton.addEventListener('click', buttonMuseum);
+  parkButton.addEventListener('click', buttonPark);
+  landmarkButton.addEventListener('click', buttonLandmark);
+  rooftopButton.addEventListener('click', buttonRooftop)
 
-  museumButton.addEventListener("click", buttonMuseum);
-  parkButton.addEventListener("click", buttonPark);
-
-  closeBreakfastRecommendation.addEventListener(`click`, hideResultSection);
-  closeLunchRecommendation.addEventListener(`click`, hideResultSection);
-  closeMuseumRecommendation.addEventListener(`click`, hideResultSection);
-  closeParkRecommendation.addEventListener(`click`, hideResultSection);
-  closeDinnerRecommendationButton.addEventListener(`click`, hideResultSection);
+  closeBreakfastRecommendation.addEventListener('click', hideResultSection);
+  closeLunchRecommendation.addEventListener('click', hideResultSection);
+  closeMuseumRecommendation.addEventListener('click', hideResultSection);
+  closeParkRecommendation.addEventListener('click', hideResultSection);
+  closeDinnerRecommendationButton.addEventListener('click', hideResultSection);
+  closeLandmarkRecommendation.addEventListener('click', hideResultSection);
+  closeRooftopRecommendation.addEventListener('click', hideResultSection);
 }
 // trying to make async because it did not work without it
 async function makeRecommendation(searchTerm, priceRange) {
-  
   let apiResults = await getInfoFromApi(searchTerm, priceRange);
-
   let randomItem = randonmlySelectItem(apiResults);
   console.log(randomItem);
-
   populateResultSection(randomItem, searchTerm);
 }
 
 async function selectBreakfast() {
   let priceRange = this.options[this.selectedIndex].value;
-  makeRecommendation("Breakfast", priceRange);
+  makeRecommendation('Breakfast', priceRange);
 }
 
 async function selectLunch() {
   let priceRange = this.options[this.selectedIndex].value;
-  makeRecommendation("Lunch", priceRange);
+  makeRecommendation('Lunch', priceRange);
 }
 
 async function selectDinner() {
   let priceRange = this.options[this.selectedIndex].value;
-  makeRecommendation("Dinner", priceRange);
+  makeRecommendation('Dinner', priceRange);
 }
 
 async function buttonMuseum() {
-  makeRecommendation("Museum");
+  makeRecommendation('Museum');
 }
 
 async function buttonPark() {
-  makeRecommendation("Park");
+  makeRecommendation('Park');
+}
+
+async function buttonLandmark() {
+  makeRecommendation('Landmark');
+}
+
+async function buttonRooftop() {
+  makeRecommendation('Rooftop');
 }
 
 buttonEvents();
 
 function populateResultSection(item, category) {
-  let img = document.getElementById("resultImg" + category);
-  let name = document.getElementById("resultName" + category);
-  let address = document.getElementById("resultAddress" + category);
-  let phone = document.getElementById("resultPhone" + category);
-  let website = document.getElementById("resultWebsite" + category);
+  let img = document.getElementById('resultImg' + category);
+  let name = document.getElementById('resultName' + category);
+  let address = document.getElementById('resultAddress' + category);
+  let phone = document.getElementById('resultPhone' + category);
+  let website = document.getElementById('resultWebsite' + category);
 
   img.src = item.image_url;
   name.innerHTML = item.name;
@@ -110,11 +117,11 @@ function populateResultSection(item, category) {
   phone.innerHTML = item.display_phone;
   website.href = item.url;
 
-  img.parentElement.style.display = "block";
+  img.parentElement.style.display = 'block';
 }
 
 //toggle hide and show solution https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
 function hideResultSection() {
-  this.parentElement.style.display = "none";
+  this.parentElement.style.display = 'none';
   
 }

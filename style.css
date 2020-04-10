@@ -1,5 +1,6 @@
 body {
   font-family: 'Neucha', cursive;
+  font-size: large;
 }
 
 .main-page {
@@ -34,14 +35,13 @@ nav {
   padding: 10px;
   color: whitesmoke;
 }
-
-/* test dropdown */
-
+/* center dropdown text https://stackoverflow.com/questions/10813528/is-it-possible-to-center-text-in-select-box */
 .price-dropdown {
   background-color: rgb(200, 200, 200);
-  min-width: 50px;
+  min-width: 100px;
   min-height: 30px;
   margin: 10px auto;
+  text-align-last: center;
 }
 
 label {
@@ -49,34 +49,37 @@ label {
   margin-bottom: 10px;
 }
 
-/* test dropdown */
-
-
-
 button {
   background-color: rgb(200, 200, 200);
   min-width: 50px;
   min-height: 30px;
 }
+
 .recommendation {
   padding: 5px 0 5px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.breakfast {
-  background-color: #FDE74C;
-}
 
 .price-button {
   margin: 10px;
 }
+
 .surprise-me-button{
   min-width: 100px;
   justify-content: space-evenly;
   padding: 10px;
   margin: 10px auto;
   border-radius: 5px;
+}
+
+.breakfast {
+  background-color: #FDE74C;
+}
+
+.landmark {
+  background-color: #BADA55;
 }
 
 .lunch {
@@ -95,9 +98,14 @@ button {
   background-color: #f4ae3b;
 }
 
+.rooftop {
+  background-color: #ACA9C4;
+}
+
 .result-section {
   display: none;
 }
+
 /* https://stackoverflow.com/questions/3029422/how-do-i-auto-resize-an-image-to-fit-a-div-container */
 .recommendation-img {
   max-width: 100%;
@@ -128,8 +136,79 @@ h3 {
   margin-left: auto;
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+.to-the-top-link {
+  text-align:right;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width:800px) {
+
+  body {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  }
+  
+  .desktop {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
+
+  }
+
+  .text-area {
+    font-size:30px;
+    max-width: 800px;
+  }
+
+  h3 {
+    font-size:30px;
+  }
+
+  .price-dropdown, .surprise-me-button {
+    font-size: 20px;
+    margin: auto 20px auto auto;
+  }
+
+  .result-section { 
+    font-size: 20px;
+  }
+  .recommendation-img {
+    text-align: center;
+  }
+}
+
+/* button animation copied from https://codepen.io/bepctak/pen/ojXjzR */
+.btn3d {
+	top: -6px;
+	border: 0;
+	transition: all 40ms linear;
+}
+
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+	-moz-outline-style: none;
+	outline: medium none;
+}
+
+.btn3d:active,
+.btn3d.active {
+	top: 2px;
+}
+
+.btn3d.btn-default {
+	color: #666666;
+	box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255, 255, 255, 0.10) inset, 0 8px 0 0 #BEBEBE, 0 8px 8px 1px rgba(0, 0, 0, .2);
+	background-color: #f9f9f9;
+}
+
+.btn3d.btn-default:active,
+.btn3d.btn-default.active {
+	color: #666666;
+	box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, .1);
+	background-color: #f9f9f9;
 }
