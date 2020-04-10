@@ -57,7 +57,7 @@
 The website will have the following capabilities:
 1. Provide the user recommendations for a day in the city including meals, museums, and parks.
 2. The recommendations will include information such as an image, an address, a phone number and/or a website link. 
-3. The recommendations will be from the restaurants, museums, and categories. 
+3. The recommendations will be from the restaurants, museums, and other categories. 
 
 - **Post-MVP**: 
 1. Add additional recommendation categories such as bars, art galleries, and outdoor activities. 
